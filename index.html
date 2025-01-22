@@ -9,14 +9,14 @@
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background: #FFFFFF;
+            background: #F8F9FA;  /* Soft gray background for a clean look */
             color: #121212;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow-y: auto; /* Enables scrolling */
         }
 
         header {
@@ -27,41 +27,41 @@
             display: flex;
             justify-content: flex-end;
             background: #1E1E1E;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 10;
         }
 
         header a {
-            color: #000000;
+            color: #FFFFFF;
             text-decoration: none;
             margin-left: 1.5rem;
             font-weight: bold;
             font-size: 1rem;
-            transition: color 0.3s;
+            transition: color 0.3s ease;
         }
 
         header a:hover {
-            color: #FFFFFF;
+            color: #00E0FF;  /* Highlight brand color */
         }
 
         .hero {
             text-align: center;
             max-width: 800px;
-            padding: 2rem;
+            padding: 2rem 1rem;
             animation: fadeIn 2s ease-in;
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: #00E0FF;
+            color: #000000;
         }
 
         .hero p {
             font-size: 1.2rem;
             line-height: 1.6;
             margin-bottom: 2rem;
-            color: #B0B0B0;
+            color: #6C757D;
         }
 
         .hero .buttons a {
@@ -72,11 +72,27 @@
             border-radius: 5px;
             font-weight: bold;
             margin: 0 0.5rem;
-            transition: background 0.3s;
+            transition: background 0.3s ease;
         }
 
         .hero .buttons a:hover {
-            background: #009ACD;
+            background: #007BFF;  /* Slightly darker blue */
+        }
+
+        section {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: #FFFFFF;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1rem;
         }
 
         footer {
@@ -98,32 +114,4 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <a href="#whitepaper">Whitepaper</a>
-        <a href="#team">Project Team</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#coin">Coin Contract</a>
-    </header>
-
-    <div class="hero">
-        <h1>Revolutionizing Airborne Navigation</h1>
-        <p>
-            Introducing a groundbreaking AI project engineered by experts from Lilium Volocopter and Roketsan. 
-            Transforming unmanned flight navigation with cutting-edge technology.
-        </p>
-        <div class="buttons">
-            <a href="#whitepaper">View Whitepaper</a>
-            <a href="#roadmap">Explore Roadmap</a>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2025 Revolutionary AI Navigation. All rights reserved.
-    </footer>
-</body>
-</html>
+    
